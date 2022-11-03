@@ -9,13 +9,7 @@
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <style>
         body {
-            background-color: #ad8121;
-        }
-
-        header {
-            background-color: #46190fb4;
-            color: white;
-            text-align: center;
+            background-color: rgba(192, 192, 192, 0.219);
         }
 
         #hero {
@@ -41,29 +35,12 @@
             content: '';
             height: 80%;
             width: 100%;
-            background-image: url(https://img.itdg.com.br/tdg/images/blog/uploads/2021/07/shutterstock_1755827621.jpg);
+            background-image: url(https://img.freepik.com/fotos-premium/ceu-noturno-com-estrelas-foto-em-grande-resistencia_217333-1396.jpg?w=1380);
             position: absolute;
             background-size: cover;
             z-index: -1;
-            box-shadow: inset 0 -100px 100px black;
-        }
-
-        h2 {
-            color: white;
-            font-weight: bold;
-        }
-
-        nav {
-            list-style: none;
-            margin: .6rem;
-        }
-
-        a {
-            font-size: 1.1rem;
-            text-decoration: none;
-            cursor: pointer;
-            color: white;
-            font-weight: bold;
+            box-shadow: inset 0 -100px 100px rgba(0, 0, 0, 0.589);
+            
         }
 
         .quadro {
@@ -83,93 +60,99 @@
             height: 30px;
             width: 450px;
             border-radius: 8px;
-            margin-left: 755px;
+            
         }
 
-        .cards {
-            display: inline-block;
-            flex-direction: column;
-            background-color: #2d2d2d;
-            width: 120px;
-            border-radius: 6px;
-            margin: .8rem;
+        
+
+        #AGENDA{
+            background-color: gold;
+            height: 260px;
+            width: 450px;
+            border-radius: 8px;
+            box-shadow: 0px 2px 9px 2px black;
+            margin-left: 40%;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
-        .cards img {
-            height: 70%;
-            width: 70%;
-            border-radius: 50%;
-            margin: 17px;
-            margin-top: -25px;
-            box-shadow: 0px 0px 0px 5px white;
+        #ft{
+            width: 200px;
         }
 
-        .botao {
-            background-color: red;
-            padding: 5px 20px;
-            border-radius: 5px;
-            margin: 0 .7rem;
-            transition: box-shadow .5s ease-in-out;
+        .right{
+            background: url(https://www.easa.europa.eu/sites/default/files/styles/max_2600x2600/public/ifu/istock-1173569309-_drone_with_plane_landing.jpg?itok=L49AYueL) no-repeat scroll right top #FFFFFF;
         }
 
-        .cards p {
-            color: white;
-            margin: .3rem 0;
+        
+
+        #siga{
+            width: 435px;
             text-align: center;
+            margin: auto;
+        }
+
+        #aaa{
+            margin-left: 40%;
+        }
+
+        #h11{
+            text-align: center;
+            padding-top: 16px;
+        }
+
+        ul{
+            list-style-position: inside;
+            columns: 2;
+            margin-top: -5px;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Restaurante da Vó</h1>
-        <nav>
-            <li><a href="sobre.html">sobre</a></li>
-        </nav>
-    </header>
+    
     <div id="hero">
-        <h2>Tudo que você quiser em um só lugar!</h2>
+        <h2>O melhor aeroporto para dornes do brasil!</h2>
     </div>
-    <div class="a3">
-        <textarea id="test-output" type="text" class="quadro"></textarea>
-        <br>
-        <input id="test-input" type="text" class="chat">
-        <button id="submit-button" type="submit" pys-onClick="bot">OK</button>
+    <div class="right">
+        <div class="left">
+            <div id="AGENDA">
+                <h1 id="h11">Agenda do dia</h1>
+                <ul>
+                    <li>08:00 AGENDADO</li>
+                    <li>08:30 DISPONIVEL</li>
+                    <li>09:00 DISPONIVEL</li>
+                    <li>09:30 AGENDADO</li>
+                    <li>10:00 DISPONIVEL</li>
+                    <li>10:30 DISPONIVEL</li>
+                    <li>11:00 AGENDADO</li>
+                    <li>11:30 DISPONIVEL</li>
+                    <li>12:00 DISPONIVEL</li>
+                    <li>13:00 AGENDADO</li>
+                    <li>13:30 DISPONIVEL</li>
+                    <li>14:00 DISPONIVEL</li>
+                    <li>14:30 AGENDADO</li>
+                    <li>15:00 DISPONIVEL</li>
+                    <li>15:30 DISPONIVEL</li>
+                    <li>16:00 AGENDADO</li>
+                    <li>16:30 AGENDADO</li>
+                    <li>17:00 DISPONIVEL</li>
+                </ul>
+            </div>
+        
+            <div id="siga">
+                <h1 >Realize agendamentos de decolagem pousos e até vistorias através do chat abaixo!</h1>
+            </div>
+                <textarea id="test-output" type="text" class="quadro"></textarea>
+                <br>
+                <div id="aaa">
+                    <input id="test-input" type="text" class="chat">
+                    <button id="submit-button" type="submit" pys-onClick="bot">OK</button>
+                </div>
+        </div>
     </div>
-    <h2>Mais pedidos</h2>
-    <div class="cards">
-        <img src="https://riomarrecife.com.br/recife/2021/02/mussarela_tabua-removebg-preview.png" alt="mussarela"
-            id="poster">
-        <p>Pizza de Mussarela</p>
-        <p style="text-align:center;">&#x2B50;9.9</p>
-        <a href="#" class="botao">Quero!</a>
-    </div>
-    <div class="cards">
-        <img src="https://comeonburger.com.br/wp-content/uploads/2019/12/xburger.jpg" alt="hamburguer" id="poster">
-        <p>X-burguer</p>
-        <p style="text-align:center;">&#x2B50;8.7</p>
-        <a href="#" class="botao">Quero!</a>
-    </div>
-    <div class="cards">
-        <img src="https://s2.glbimg.com/XmboOMG7q_824IlRve7ZF-EplsU=/0x0:3120x2080/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/R/Z/SFOj7ES1WMVHp1n7Gdnw/mg-4833.jpg"
-            alt="lasanha" id="poster">
-        <p>Lasanha bolonhesa</p>
-        <p style="text-align:center;">&#x2B50;8.5</p>
-        <a href="#" class="botao">Quero!</a>
-    </div>
-    <div class="cards">
-        <img src="https://receitinhas.com.br/wp-content/uploads/2016/12/bife-a-parmegiana-730x365.jpg" alt="parmegiana"
-            id="poster">
-        <p>Parmegiana de carne</p>
-        <p style="text-align:center;">&#x2B50;8.0</p>
-        <a href="#" class="botao">Quero!</a>
-    </div>
-    <div class="cards">
-        <img src="https://img.cybercook.com.br/receitas/776/feijoada-840x480.jpeg?q=75" alt="Feijoada" id="poster">
-        <p>Feijoada Magra</p>
-        <p style="text-align:center;">&#x2B50;7.8</p>
-        <a href="#" class="botao">Quero!</a>
-    </div>
+   
+    
     <py-script>
         from js import console
 
