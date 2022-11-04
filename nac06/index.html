@@ -8,16 +8,27 @@
     <title>Restaurante da vó</title>
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <style>
-        body {
-            background-color: rgba(192, 192, 192, 0.219);
-        }
 
+        body{
+            background-color: rgb(0, 0, 39);
+        }
+        
+        main{
+            background-color: rgb(117, 117, 117);
+            width: 40%;
+            height: 100%;
+            margin: auto;
+            border-radius: 8px;
+            color: white;
+        }
         #hero {
             height: 12.5rem;
             width: 100%;
             position: relative;
             color: white;
         }
+
+       
 
         #hero h2 {
             padding: 2rem;
@@ -43,150 +54,141 @@
             
         }
 
-        .quadro {
-            background-color: white;
-            height: 350px;
-            width: 450px;
-            border-radius: 8px;
-            box-shadow: 0px 2px 9px 2px black;
-            margin-left: 40%;
-            margin-top: 40px;
-            margin-bottom: 20px;
+        h1{
+            text-align: center;
+            padding-top: 15px;
+            color: white;
         }
 
-        .chat {
-            background-color: white;
-            box-shadow: 0px 2px 5px 2px black;
+
+        .progresso-bar{
+            --progress: 10;
             height: 30px;
-            width: 450px;
-            border-radius: 8px;
+            padding: 5px;
+            margin: 10px;
+            background-color: #ccc;
+            display: flex;
+            border-radius: 5px;
+            
+            
+
+        }
+
+        .progresso-bar::before{
+            content: "";
+            width: calc(var(--progress) * 1%);
+            background-color: hsl(calc(var(--progress)*1.2), 80%, 50%);
+            transition: all 0.2s ease;
+            background-image: url(https://art.pixilart.com/edfacf497337dbf.png);
+        }
+
+        .progresso-bateria{
+            --progress: 100;
+            height: 20px;
+            padding: 5px;
+            margin: 10px;
+            background-color: #ccc;
+            display: flex;
+            border-radius: 5px;
             
         }
 
-        
-
-        #AGENDA{
-            background-color: gold;
-            height: 260px;
-            width: 450px;
-            border-radius: 8px;
-            box-shadow: 0px 2px 9px 2px black;
-            margin-left: 40%;
-            margin-top: 40px;
-            margin-bottom: 20px;
+        .progresso-bateria::before{
+            content: "";
+            width: calc(var(--progress) * 1%);
+            background-color: hsl(calc(var(--progress)*1.2), 80%, 50%);
+            transition: all 0.2s ease;
+            background-image: url(https://art.pixilart.com/edfacf497337dbf.png);
         }
 
-        #ft{
-            width: 200px;
+        p{
+            display: inline-block;         
         }
 
-        .right{
-            background: url(https://www.easa.europa.eu/sites/default/files/styles/max_2600x2600/public/ifu/istock-1173569309-_drone_with_plane_landing.jpg?itok=L49AYueL) no-repeat scroll right top #FFFFFF;
+        h2{
+            margin-left: 10px;
         }
 
-        
+        h3{
+            margin-left: 10px;
+        }
 
-        #siga{
-            width: 435px;
+        .edit {
+            width: 287px;
+            height: 40px;
+            background-color: #0B50A0;
+            color: white;
             text-align: center;
-            margin: auto;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 20px;
+            cursor: pointer;
         }
 
-        #aaa{
-            margin-left: 40%;
+        #solicitar{
+            margin-left: 30% ;
         }
 
-        #h11{
-            text-align: center;
-            padding-top: 16px;
+        #digita{
+            margin-left: 10px;
+            
         }
 
-        ul{
-            list-style-position: inside;
-            columns: 2;
-            margin-top: -5px;
+        .botao{
+            margin-left: 50px;
         }
+
+        #img{
+            display: inline-block;
+        }
+
+        img{
+            height: 100px;
+            margin: 10px;
+        }
+
+        #botoes{
+            width: 1000px;
+        }
+
+       
     </style>
 </head>
 
 <body>
     
-    <div id="hero">
-        <h2>O melhor aeroporto para dornes do brasil!</h2>
-    </div>
-    <div class="right">
-        <div class="left">
-            <div id="AGENDA">
-                <h1 id="h11">Agenda do dia</h1>
-                <ul>
-                    <li>08:00 AGENDADO</li>
-                    <li>08:30 DISPONIVEL</li>
-                    <li>09:00 DISPONIVEL</li>
-                    <li>09:30 AGENDADO</li>
-                    <li>10:00 DISPONIVEL</li>
-                    <li>10:30 DISPONIVEL</li>
-                    <li>11:00 AGENDADO</li>
-                    <li>11:30 DISPONIVEL</li>
-                    <li>12:00 DISPONIVEL</li>
-                    <li>13:00 AGENDADO</li>
-                    <li>13:30 DISPONIVEL</li>
-                    <li>14:00 DISPONIVEL</li>
-                    <li>14:30 AGENDADO</li>
-                    <li>15:00 DISPONIVEL</li>
-                    <li>15:30 DISPONIVEL</li>
-                    <li>16:00 AGENDADO</li>
-                    <li>16:30 AGENDADO</li>
-                    <li>17:00 DISPONIVEL</li>
-                </ul>
-            </div>
-        
-            <div id="siga">
-                <h1 >Realize agendamentos de decolagem pousos e até vistorias através do chat abaixo!</h1>
-            </div>
-                <textarea id="test-output" type="text" class="quadro"></textarea>
-                <br>
-                <div id="aaa">
-                    <input id="test-input" type="text" class="chat">
-                    <button id="submit-button" type="submit" pys-onClick="bot">OK</button>
-                </div>
+        <div id="hero">
+            <h2>DRUBER</h2>
         </div>
-    </div>
-   
-    
-    <py-script>
-        from js import console
-
-        navegacao = 0
-
-        def bot(*args, **kwargs):
-
-            global navegacao
-
-            text = Element('test-input').element.value
-
-            if(navegacao == 0):
-                match text:
-                    case "1":
-                        text = f'Escolha as opções de doces:\n\n1 - Pizzas doces \n2 - Sobremesa\n'
-                        navegacao += 1
-                    case "2":
-                        text = f'Escolha as opções de salgados:\n\n1 - Comida Tradicional BR \n2 - Massas \n3 - Macarrão\n'
-                        navegacao += 1
-                    case "3":
-                        text = f'Escolha as opções vegetarianas:\n\n1 - Moqueca de Cogumelos \n2 - Feijoada de Tofu\n'
-                        navegacao += 1
-                if(navegacao == 1):
-                    Element('test-output').element.append(text)
-                    Element('test-input').element.value = ''
-                else:
-                    Element('test-input').element.value = ''
-            else:
-                Element('test-input').element.value = ''
-    </py-script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../js/index.js"></script>
+        <main>
+        <h1>Status</h1>
+           <div class="progresso-bar"></div>
+           <p style="margin-right: 300px; margin-left: 10px;">Preparação</p>
+           <p style="margin-right: 310px;">A caminho</p>
+           <p>Entregue</p>
+           <h2>Velocidade: </h2>
+           <h2>Altitude: </h2>
+           <h2>Bateria:</h2>
+           <div class="progresso-bateria"></div>
+           <div>
+        <h3>Origem:</h3>
+        <div id="img">
+            <img src="https://www.visaooeste.com.br/wp-content/uploads/2017/03/6-Topo-Sams-Club-Medium-640x457.jpg?mrf-size=m" alt="">
+            <img src="https://www.contabilidadecabo.com.br/img/farmacia.jpg" alt="">
+            <img src="https://curitibacult.com.br/wp-content/uploads/2021/02/Prestinaria-ok.jpg" alt="">
+            <img src="https://iguatemi.com.br/jkiguatemi/sites/jkiguatemi/files/2017-12/Renner.png" alt="">
+        </div>
+        <div id="botoes">
+            <input type="button" value="Mercado" class="botao">
+            <input type="button" value="Farmacia" class="botao" style="margin-left: 90px;">
+            <input type="button" value="Padaria" class="botao" style="margin-left: 80px;">
+            <input type="button" value="Renner" class="botao" style="margin-left: 80px;">
+        </div>
+        <h3>Destino:</h3>
+        <input type="text" id="digita">
+           </div>
+           <div id="solicitar"><input type="button" value="SOLICITAR" class="edit"></div>
+    </main>
 </body>
 
 </html>
-
-<!-- PIZZAS -  -->
